@@ -67,7 +67,6 @@ The system analyzes key profile metrics and detects whether a given profile is r
 ├── frontend/ # UI (HTML, CSS, JS)
 ├── vercel.json # Routing config
 
----
 ```
 ## Screenshots
 
