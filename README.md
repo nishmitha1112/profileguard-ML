@@ -57,17 +57,18 @@ The system analyzes key profile metrics and detects whether a given profile is r
 
 ---
 
-## Project Structure
+```## Project Structure
 456/
 │
-├── ```data/ # Dataset files```
-├── ```models/ # Trained ML model (.pkl)```
-├── ```notebooks/ # Model training```
-├── ```backend/ # Flask API```
-├── ```frontend/ # UI (HTML, CSS, JS)```
-├── ```vercel.json # Routing config```
+├── data/ # Dataset files
+├── models/ # Trained ML model (.pkl)
+├── notebooks/ # Model training
+├── backend/ # Flask API
+├── frontend/ # UI (HTML, CSS, JS)
+├── vercel.json # Routing config
 
 ---
+```
 ## Screenshots
 
 <img width="1894" height="892" alt="Screenshot 2025-12-08 220732" src="https://github.com/user-attachments/assets/f78db002-3992-437b-ae7b-0194d3b1d986" />
