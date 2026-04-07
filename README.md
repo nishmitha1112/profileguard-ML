@@ -8,9 +8,6 @@ ProfileGuard ML is a Machine Learning–based web application that detects wheth
 
  Frontend:  
 👉 https://profileguard-ml.vercel.app/
- Backend API:  
-👉 https://profileguard-backend.onrender.com
-
 ---
 
 ##  Project Overview
