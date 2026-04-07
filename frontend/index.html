@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ProfileGuard ML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background decorative social icons -->
+    <div class="bg-icons">
+        <div class="icon ig">IG</div>
+        <div class="icon fb">f</div>
+        <div class="icon tw">X</div>
+        <div class="icon li">in</div>
+        <div class="icon wa">WA</div>
+        <div class="icon tg">TG</div>
+    </div>
+
+    <header>
+        <h1>🛡️ ProfileGuard ML</h1>
+        <p>AI-Powered Fake Profile Detection Dashboard</p>
+    </header>
+
+    <main class="dashboard">
+
+        <!-- LEFT: INPUT PANEL -->
+        <section class="card input-card">
+            <h2>Profile Metrics</h2>
+
+            <label>Followers Count</label>
+            <input type="number" id="followers_count" placeholder="e.g. 1200">
+
+            <label>Friends Count</label>
+            <input type="number" id="friends_count" placeholder="e.g. 300">
+
+            <label>FF Ratio</label>
+            <input type="number" step="0.01" id="ff_ratio" placeholder="followers / friends">
+
+            <div class="toggle-row">
+                <div class="toggle-box">
+                    <span>Verified Account</span>
+                    <label class="switch">
+                        <input type="checkbox" id="verified">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="toggle-box">
+                    <span>Default Profile Image</span>
+                    <label class="switch">
+                        <input type="checkbox" id="default_profile">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <button onclick="predict()">Analyze Profile</button>
+        </section>
+
+        <!-- RIGHT: RESULT PANEL -->
+        <section class="card result-card">
+            <h2>Detection Result</h2>
+
+            <!-- Shield + Confidence -->
+            <div class="top-result">
+                <div id="shield-icon" class="shield neutral">?</div>
+
+                <div class="confidence-wrapper">
+                    <div id="confidence-ring" class="confidence-ring">
+                        <div class="confidence-inner">
+                            <div id="confidence-value">--%</div>
+                        </div>
+                    </div>
+                    <div class="conf-label">Model Confidence</div>
+                </div>
+            </div>
+
+            <!-- Status + Risk badge -->
+            <div id="result" class="status waiting">Ready to Predict</div>
+            <div id="risk" class="risk-badge neutral">Awaiting Input</div>
+
+            <!-- AI Reasoning -->
+            <div class="reasoning">
+                <h3>AI Reasoning</h3>
+                <p id="reason-text">
+                    Provide profile metrics on the left to let ProfileGuard ML analyze authenticity.
+                </p>
+            </div>
+
+            <!-- Key Factors -->
+            <div class="factors">
+                <h3>Key Evaluation Factors</h3>
+                <ul>
+                    <li>Followers vs Friends Ratio</li>
+                    <li>Verified Account Status</li>
+                    <li>Default Profile Image Usage</li>
+                    <li>Network Authenticity Pattern</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
